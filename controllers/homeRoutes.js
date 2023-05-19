@@ -25,7 +25,9 @@ router.get("/", async (req, res) => {
       logged_in: req.session.logged_in,
     });
   } catch (err) {
+    console.log(err);
     res.status(500).json(err);
+    // res.redirect('/login');
   }
 });
 
@@ -48,6 +50,7 @@ router.get("/blogPost/:id", async (req, res) => {
     });
   } catch (err) {
     res.status(500).json(err);
+    // res.redirect('/login');
   }
 });
 

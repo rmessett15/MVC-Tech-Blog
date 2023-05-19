@@ -21,9 +21,9 @@ BlogPost.init(
     date_created: {
       type: DataTypes.DATE,
       // ?????????????????
-      get() {
-        return moment(this.getDataValue('date_created')).format('DD/MM/YYYY h:mm:ss');
-      },
+      // get() {
+      //   return moment(this.getDataValue('date_created')).format('DD/MM/YYYY h:mm:ss');
+      // },
       // ?????????????????
       allowNull: false,
       defaultValue: DataTypes.NOW,
@@ -46,3 +46,12 @@ BlogPost.init(
 );
 
 module.exports = BlogPost;
+
+// ????????????????????
+// Install moment npm i
+// Include (require)
+// Try using formatter in model
+// Then pass it into handlebars (what was deleted)
+// Save within dayjs format in json seed data
+// Look into dayjs or moment and the difference
+// ????????????????????
