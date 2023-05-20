@@ -1,0 +1,38 @@
+[
+  {
+    "comment_body": "What is this lady talking about!",
+    "date_created": "January 15, 1982",
+    "user_id": 1,
+    "blogPost_id": 1
+  },
+  {
+    "comment_body": "I can see what she meant",
+    "date_created": "June 2, 1993",
+    "user_id": 2,
+    "blogPost_id": 1
+  },
+  {
+    "comment_body": "Peace and love mannnnn",
+    "date_created": "August 8, 2010",
+    "user_id": 1,
+    "blogPost_id": 2
+  },
+  {
+    "comment_body": "What is your opinion?",
+    "date_created": "November 27, 2015",
+    "user_id": 2,
+    "blogPost_id": 2
+  },
+  {
+    "comment_body": "lol",
+    "date_created": "March 18, 1977",
+    "user_id": 1,
+    "blogPost_id": 3
+  },
+  {
+    "comment_body": "Never believe the media",
+    "date_created": "May 1, 2023",
+    "user_id": 2,
+    "blogPost_id": 3
+  }
+]
