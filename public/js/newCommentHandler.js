@@ -1,6 +1,8 @@
 async function newCommentHandler(event) {
   event.preventDefault();
 
+  console.log('clicked me');
+
   // get text and trim whitespace
   const comment_body = document.getElementById("comment").value.trim();
   // get post id from URL
@@ -28,9 +30,9 @@ async function newCommentHandler(event) {
 }
 
 console.log("HERE!");
-console.log(document.getElementById("comment"));
+console.log(document.getElementById("comment-form"));
 document
-  .getElementById("comment")
+  .getElementById("comment-form")
   .addEventListener("submit", newCommentHandler);
 
 // *************Possibly re-write file***************
