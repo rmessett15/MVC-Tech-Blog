@@ -69,3 +69,7 @@ app.use(routes);
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log("Now listening"));
 });
+
+
+// Why does the login info sometimes not work after a while?
+// Why does comment table have a column that says blog_post_id not blogPost_id?
