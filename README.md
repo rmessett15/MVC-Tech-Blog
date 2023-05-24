@@ -85,7 +85,7 @@ This application is powered by Node.js (v16.19.1), Express.js (v4.18.2), JavaScr
 
 11. From there, you can utilize applications such as Insomnia to test the functionality of the routes within the program.
 
-*******************************************************************************************************************************
+******************************************************************************************************************************
 
 ## Credits
 

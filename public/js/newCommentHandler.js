@@ -29,6 +29,8 @@ async function newCommentHandler(event) {
 
 console.log("HERE!");
 console.log(document.getElementById("comment"));
-document.getElementById("comment").addEventListener("submit", newCommentHandler);
+document
+  .getElementById("comment")
+  .addEventListener("submit", newCommentHandler);
 
 // *************Possibly re-write file***************

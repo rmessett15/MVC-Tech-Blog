@@ -1,2 +1,29 @@
 {{!-- This will be where the users posts are saved -> user feed --}}
 {{!-- Loop over data in the user table within the database --}}
+
+ {{!-- Need to mess with variable names on this page -> stole entirely from Project 2 --}}
+
+    <div class="row">
+        <div class="text-center mx-auto pt-2">
+            <h1>{{user.name}}'s Blog</h1>
+        </div>
+    </div>
+    {{#if blogPosts.[0]}}
+        {{#each blogPosts}}
+            {{> card-userPage}}
+        {{/each}}
+    {{else}}
+        {{#if (is_my_page user.id userId)}}
+            <div class="container">
+                <div class="row justify-content-center">
+                    <a href="/create"><button class="btn btn-secondary">Create your first post!</button></a>
+                </div>
+            </div>
+        {{else}}
+            <div class="container">
+                <div class="row justify-content-center">
+                    <h1>This user hasn't created any posts yet!</h1>
+                </div>
+            </div>
+        {{/if}}
+    {{/if}}

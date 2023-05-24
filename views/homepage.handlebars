@@ -1,19 +1,29 @@
 <!-- Loop over each object in the blogPosts array -->
-{{#each blogPosts as |blogPost| }}
-<div class="row mb-4 project">
+{{#each blogPosts as |blogPost|}}
+  <div class="row mb-4 project">
     <div class="col-md-5">
-        <h2>
-            <a href="/blogPost/{{blogPost.id}}">{{blogPost.title}}</a>
-        </h2>
-        <p>Created by {{blogPost.user.name}} on {{format_date blogPost.date_created}}</p>
+      <h2>
+        <a href="/blogPost/{{blogPost.id}}">{{blogPost.title}}</a>
+      </h2>
+      <p>Created by
+        {{blogPost.user.name}}
+        on
+        {{format_date blogPost.date_created}}</p>
     </div>
     <div class="col-md-7">
-        <p>
-            {{blogPost.description}}
-        </p>
+      <p>
+        {{blogPost.description}}
+      </p>
     </div>
-</div>
+  </div>
+
+  {{#each comments as |comment|}}
+    <div>
+      <p>{{comment.comment_body}}</p>
+    </div>
+  {{/each}}
+
 {{/each}}
 
-{{!-- 3 curly's if displays html --}}
-{{!-- 2 otherwise --}}
+{{! 3 curly's if displays html }}
+{{! 2 otherwise }}
