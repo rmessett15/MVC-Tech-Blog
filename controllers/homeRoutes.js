@@ -45,7 +45,7 @@ router.get("/blogPost/:id", async (req, res) => {
         },
         {
           model: Comment,
-          attributes: ["comment_body"],
+          attributes: ["comment_body", "date_created", "user_id"],
         },
       ],
     });
@@ -69,7 +69,13 @@ router.get("/dashboard", withAuth, async (req, res) => {
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ["password"] },
       include: [
-        { model: BlogPost },
+        { 
+          model: BlogPost,
+          // attributes: ["title"]
+        },
+        {
+          model: Comment,
+        },
         // ???????????????????????
         // {
         //   model: User,
@@ -88,6 +94,24 @@ router.get("/dashboard", withAuth, async (req, res) => {
   } catch (err) {
     res.status(500).json(err);
   }
+});
+
+// NEW POST PAGE: Renders 'create.handlebars'; redirects to /login if not logged in
+router.get('/create', async (req, res) => {
+    try {
+        if (req.session.logged_in) {
+            res.render('create', {
+                loggedIn: req.session.logged_in,
+                userId: req.session.user_id,
+            });
+            return;
+        } else {
+            res.redirect('/login');
+        }
+    } catch (err) {
+        console.log(err);
+        res.status(500).json(err);
+    }
 });
 
 router.get("/login", (req, res) => {
