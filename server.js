@@ -75,9 +75,12 @@ sequelize.sync({ force: false }).then(() => {
 // Why does comment table have a column that says blog_post_id not blogPost_id?
 
 // NEW QUESTIONS
+// Change logout from a button to a a tag link
+// Change date format????
 // Why am I logged out? Confused why/when session ends????
 // How to get user name to display who wrote the comment as oppose to user_id
 // Need to figure out why description is null when I create a new post as a user from create new post button
 // Need to make it so I can always see the new post button no matter if there are any user posts or not
 // Need to add edit button and delete button functionality once I click on my own blog posts from the dashboard page for both pages -> (/dashboard & /blogPost/:id)
 // Why does bootstrap not seem to always carry over styles (logout button and submit button on comments page)
+// STYLE Page

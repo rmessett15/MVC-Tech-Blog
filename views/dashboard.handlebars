@@ -12,8 +12,10 @@
         {{#each blogPosts as |blogPost|}}
             {{!-- {{> card-userPage}} --}}
             <h4><a href="/blogPost/{{blogPost.id}}">{{blogPost.title}}</a></h4>
-            <p>{{blogPost.date_created}}</p>
+            <p>{{format_date blogPost.date_created}}</p>
             <p>{{blogPost.description}}</p>
+            {{!-- <button>Edit</button>
+            <button>Delete</button> --}}
         {{/each}}
     {{!-- {{else}}
         {{#if (is_my_page user.id userId)}}
