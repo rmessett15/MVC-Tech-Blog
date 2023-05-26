@@ -3,40 +3,51 @@
 
  {{!-- Need to mess with variable names on this page -> stole entirely from Project 2 --}}
 
-    <div class="row">
-        <div class="text-center mx-auto pt-2">
-            <h1>{{name}}'s Blog</h1>
+<div class="row">
+    <div class="text-center mx-auto pt-2">
+        <h2>{{name}}'s Blog</h2>
+    </div>
+</div>
+<div class="text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 mx-auto text-left mt-5">
+                {{#if blogPosts.length}}
+                    {{#each blogPosts as |blogPost|}}
+                        {{!-- {{> card-userPage}} --}}
+                        <div class="card text-dark shadow">
+                            <h4><a href="/blogPost/{{blogPost.id}}">{{blogPost.title}}</a></h4>
+                            <p>{{format_date blogPost.date_created}}</p>
+                            <p>{{blogPost.description}}</p>
+                        </div>
+                        <br>
+                        {{!-- <button>Edit</button>
+                        <button>Delete</button> --}}
+                    {{/each}}
+
+{{!-- {{else}}
+    {{#if (is_my_page user.id userId)}}
+        <div class="container">
+            <div class="row justify-content-center">
+                <a href="/create"><button class="btn btn-secondary">Create your first post!</button></a>
+            </div>
+        </div>
+    {{else}}
+        <div class="container">
+            <div class="row justify-content-center">
+                <p>This user hasn't created any posts yet!</p>
+            </div>
+        </div>
+    {{/if}} --}}
+                {{/if}}
+            </div>
         </div>
     </div>
-    {{#if blogPosts.length}}
-        {{#each blogPosts as |blogPost|}}
-            {{!-- {{> card-userPage}} --}}
-            <h4><a href="/blogPost/{{blogPost.id}}">{{blogPost.title}}</a></h4>
-            <p>{{format_date blogPost.date_created}}</p>
-            <p>{{blogPost.description}}</p>
-            {{!-- <button>Edit</button>
-            <button>Delete</button> --}}
-        {{/each}}
-    {{!-- {{else}}
-        {{#if (is_my_page user.id userId)}}
-            <div class="container">
-                <div class="row justify-content-center">
-                    <a href="/create"><button class="btn btn-secondary">Create your first post!</button></a>
-                </div>
-            </div>
-        {{else}}
-            <div class="container">
-                <div class="row justify-content-center">
-                    <p>This user hasn't created any posts yet!</p>
-                </div>
-            </div>
-        {{/if}} --}}
-    {{/if}}
 
     {{#if (is_my_page user.id userId)}}
     <div class="container">
-        <div class="row justify-content-center">
-            <a href="/create"><button class="btn btn-secondary">Create a post!</button></a>
+        <div class="row text-center">
+            <a href="/create"><button class="btn btn-secondary mt-3">Create a post!</button></a>
         </div>
     </div>
     {{else}}
@@ -46,3 +57,4 @@
         </div>
     </div>
     {{/if}}
+</div>
