@@ -40,7 +40,7 @@ const hbs = exphbs.create({ helpers });
 const sess = {
   secret: "Super secret secret",
   cookie: {
-    maxAge: 12000000,
+    maxAge: 1000,//12000000,
     httpOnly: true,
     secure: false,
     sameSite: "strict",
@@ -84,3 +84,8 @@ sequelize.sync({ force: false }).then(() => {
 // Need to add edit button and delete button functionality once I click on my own blog posts from the dashboard page for both pages -> (/dashboard & /blogPost/:id)
 // Why does bootstrap not seem to always carry over styles (logout button and submit button on comments page)
 // STYLE Page
+
+// AFTER THURSDAY CLASS
+// Style Page -> make it a tech blog
+// Need to add edit button and delete button functionality once I click on my own blog posts from the dashboard page for both pages -> (/dashboard & /blogPost/:id)
+// Need to make it so that when I idle on the site for too long when I click the delete button then I am redirected to the login page

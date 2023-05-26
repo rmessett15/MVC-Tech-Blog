@@ -4,6 +4,7 @@ const submitEdit = async (event) => {
   event.preventDefault();
   const title = document.getElementById("titleInput").value;
   const description = document.getElementById("bodyInput").value;
+  
   if (title && description) {
     const response = await fetch(`/api/blogPost/${blogPost[2]}`, {
       method: "PUT",

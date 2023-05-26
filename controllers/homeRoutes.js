@@ -35,7 +35,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.get("/blogPost/:id", async (req, res) => {
+router.get("/blogPost/:id", withAuth, async (req, res) => {
   try {
     const blogPostData = await BlogPost.findByPk(req.params.id, {
       include: [
@@ -54,7 +54,7 @@ router.get("/blogPost/:id", async (req, res) => {
     });
 
     const blogPost = blogPostData.get({ plain: true });
-console.log(blogPost)
+    console.log(blogPost)
 
     res.render("blogPost", {
       ...blogPost,
@@ -62,7 +62,7 @@ console.log(blogPost)
     });
   } catch (err) {
     res.status(500).json(err);
-    // res.redirect('/login');
+    res.redirect('/login');
   }
 });
 
