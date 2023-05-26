@@ -45,12 +45,16 @@ router.get("/blogPost/:id", async (req, res) => {
         },
         {
           model: Comment,
-          attributes: ["comment_body", "date_created", "user_id"],
+          include: [
+            User
+          ],
+          // attributes: ["comment_body", "date_created", "user_id"],
         },
       ],
     });
 
     const blogPost = blogPostData.get({ plain: true });
+console.log(blogPost)
 
     res.render("blogPost", {
       ...blogPost,
@@ -112,6 +116,42 @@ router.get('/create', async (req, res) => {
         console.log(err);
         res.status(500).json(err);
     }
+});
+
+router.get("/create/:id", async (req, res) => {
+  try {
+        const blogPostData = await BlogPost.findByPk(req.params.id, {
+          include: [
+            {
+              model: User,
+              attributes: ["name"],
+            },
+            {
+              model: Comment,
+              include: [User],
+              // attributes: ["comment_body", "date_created", "user_id"],
+            },
+          ],
+        });
+
+        const blogPost = blogPostData.get({ plain: true });
+        console.log(blogPost);
+
+    if (req.session.logged_in) {
+
+      res.render("edit", {
+        ...blogPost,
+        loggedIn: req.session.logged_in,
+        userId: req.session.user_id,
+      });
+      return;
+    } else {
+      res.redirect("/login");
+    }
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
 });
 
 router.get("/login", (req, res) => {

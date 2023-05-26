@@ -3,14 +3,15 @@ const deletePostHandler = async (event) => {
   console.log('clicked me')
   console.log(event.target);
 
-//   let blogPost;
+  let blogPost = window.location.pathname.split('/');
+  console.log(blogPost);
 
-  const response = await fetch(`/api/blogPost/${blogPost.id}`, {
+  const response = await fetch(`/api/blogPost/${blogPost[2]}`, {
     method: "DELETE",
   });
 
   if (response.ok) {
-    document.location.redirect(`/dashboard`);
+    document.location.assign(`/dashboard`);
   } else {
     alert(response.statusText);
   }
