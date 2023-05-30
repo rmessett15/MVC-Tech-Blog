@@ -1,6 +1,8 @@
+// Imports
 const router = require("express").Router();
 const { User } = require("../../models");
 
+// Posts new user email, username, and password to database
 router.post("/", async (req, res) => {
   try {
     const userData = await User.create(req.body);
@@ -16,6 +18,7 @@ router.post("/", async (req, res) => {
   }
 });
 
+// When user logs in as an existing user then this route validates user credentials and logs user in if a match is found in the database
 router.post("/login", async (req, res) => {
   try {
     const userData = await User.findOne({ where: { email: req.body.email } });
@@ -49,6 +52,7 @@ router.post("/login", async (req, res) => {
   }
 });
 
+// When user logs out the session is ended
 router.post("/logout", (req, res) => {
   if (req.session.logged_in) {
     req.session.destroy(() => {
@@ -59,4 +63,5 @@ router.post("/logout", (req, res) => {
   }
 });
 
+// Exports
 module.exports = router;

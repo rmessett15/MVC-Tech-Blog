@@ -1,4 +1,5 @@
-<!-- Loop over each object in the blogPosts array -->
+{{! Homepage }}
+{{! Loop over each object in the blogPosts array }}
 <div class="container">
   <div class="row">
     {{#each blogPosts as |blogPost|}}
@@ -15,23 +16,7 @@
         <div class="card-body">
           <p>{{blogPost.description}}</p>
         </div>
-        {{! Maybe comment back in depending on format I want }}
-        {{!-- <div class="col-md-7">
-      <p>
-        {{blogPost.description}}
-      </p>
-    </div> --}}
       </div>
-
-      {{!-- {{#each comments as |comment|}}
-    <div>
-      <p>{{comment.comment_body}}</p>
-    </div>
-  {{/each}} --}}
-
     {{/each}}
   </div>
 </div>
-
-{{! 3 curly's if displays html }}
-{{! 2 otherwise }}

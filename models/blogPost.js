@@ -1,8 +1,10 @@
+// Imports
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
 class BlogPost extends Model {}
 
+// BlogPost Table Model
 BlogPost.init(
   {
     id: {
@@ -20,11 +22,6 @@ BlogPost.init(
     },
     date_created: {
       type: DataTypes.DATE,
-      // ?????????????????
-      // get() {
-      //   return moment(this.getDataValue('date_created')).format('DD/MM/YYYY h:mm:ss');
-      // },
-      // ?????????????????
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
@@ -45,13 +42,5 @@ BlogPost.init(
   }
 );
 
+// Export
 module.exports = BlogPost;
-
-// ????????????????????
-// Install moment npm i
-// Include (require)
-// Try using formatter in model
-// Then pass it into handlebars (what was deleted)
-// Save within dayjs format in json seed data
-// Look into dayjs or moment and the difference
-// ????????????????????

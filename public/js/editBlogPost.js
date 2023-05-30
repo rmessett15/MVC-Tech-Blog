@@ -1,15 +1,12 @@
 let blogPost = window.location.pathname.split("/");
 
-const editComment = async (event) => {
+// Function created allowing user to edit blog posts from the individual blog post page
+const editPost = async (event) => {
   event.preventDefault();
   console.log("clicked me");
 
   // get text and trim whitespace
   const comment_body = document.getElementById("editBtn").value.trim();
-
-  // get post id from URL
-  //   const url = window.location.toString().split("/");
-  //   const post_id = url[url.length - 1];
 
   console.log(blogPost);
 
@@ -18,6 +15,7 @@ const editComment = async (event) => {
 
 const editButton = document.querySelectorAll("#editBtn");
 
+// Iterates over all buttons on the page allowing for edit functionality
 for (let i = 0; i < editButton.length; i++) {
-  editButton[i].addEventListener("click", editComment);
+  editButton[i].addEventListener("click", editPost);
 }

@@ -1,3 +1,4 @@
+// Imports
 const router = require("express").Router();
 const { BlogPost, Comment, User } = require("../../models");
 
@@ -79,6 +80,5 @@ router.delete("/:id", async (req, res) => {
   }
 });
 
+// Exports
 module.exports = router;
-
-// *************Possibly re-write file***************

@@ -1,3 +1,4 @@
+{{!-- Blog Post Page --}}
 <div class="container">
     <div class="row">
         <div class="card text-dark shadow mb-3">
@@ -14,8 +15,6 @@
                 {{#each comments as |comment| }}
                     <div>
                         <p>{{comment.comment_body}} by {{comment.user.name}} on {{format_date comment.date_created}}</p>
-                        {{!-- <p>{{}}</p>
-                        <p>{{comment.user_id}}</p> --}}
                     </div>
                 {{/each}}
             </div>
@@ -28,9 +27,3 @@
 <script src="/js/newCommentHandler.js"></script>
 <script src="/js/deleteBlogPost.js"></script>
 <script src="/js/editBlogPost.js"></script>
-
-
-{{!-- Need to add comment input box here in this page and make it submittable --}}
-
-{{!-- WHEN I enter a comment and click on the submit button while signed in --}}
-{{!-- THEN the comment is saved and the post is updated to display the comment, the comment creator’s username, and the date created --}}

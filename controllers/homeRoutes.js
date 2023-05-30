@@ -1,10 +1,11 @@
+// Imports
 const router = require("express").Router();
 const { BlogPost, User, Comment } = require("../models");
 const withAuth = require("../utils/auth");
 
 router.get("/", async (req, res) => {
   try {
-    // Get all blogPosts and JOIN with user data
+    // Get all blogPosts and JOIN with user data and comment data
     const blogPostData = await BlogPost.findAll({
       include: [
         {
@@ -31,13 +32,14 @@ router.get("/", async (req, res) => {
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
-    // res.redirect('/login');
   }
 });
 
+// Route set up to find single blog post and render blogPost page
 router.get("/blogPost/:id", withAuth, async (req, res) => {
   try {
     const blogPostData = await BlogPost.findByPk(req.params.id, {
+      // Join user data and comment data with blog post data
       include: [
         {
           model: User,
@@ -46,7 +48,6 @@ router.get("/blogPost/:id", withAuth, async (req, res) => {
         {
           model: Comment,
           include: [User],
-          // attributes: ["comment_body", "date_created", "user_id"],
         },
       ],
     });
@@ -64,26 +65,21 @@ router.get("/blogPost/:id", withAuth, async (req, res) => {
   }
 });
 
+// route to allow logged in user access to the dashboard page
 // Use withAuth middleware to prevent access to route
 router.get("/dashboard", withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ["password"] },
+      // Join user blog post and comment data with user data
       include: [
         {
           model: BlogPost,
-          // attributes: ["title"]
         },
         {
           model: Comment,
         },
-        // ???????????????????????
-        // {
-        //   model: User,
-        //   attributes: ["name"],
-        // },
-        // ???????????????????????
       ],
     });
 
@@ -116,9 +112,11 @@ router.get("/create", async (req, res) => {
   }
 });
 
+// Route set up to be able to edit an existing blog post
 router.get("/create/:id", async (req, res) => {
   try {
     const blogPostData = await BlogPost.findByPk(req.params.id, {
+      // Join user data and comment data with blog post data
       include: [
         {
           model: User,
@@ -127,7 +125,6 @@ router.get("/create/:id", async (req, res) => {
         {
           model: Comment,
           include: [User],
-          // attributes: ["comment_body", "date_created", "user_id"],
         },
       ],
     });
@@ -161,4 +158,5 @@ router.all("/login", (req, res) => {
   res.render("login");
 });
 
+// Export
 module.exports = router;

@@ -1,9 +1,9 @@
+// Function created that allows users to delete blog posts on dashboard page and then redirect them to an updated dashboard
 const deletePostHandler = async (event) => {
   event.preventDefault();
   console.log("clicked me");
   console.log(event.target);
 
-  // let blogPost = window.location.pathname.split('/');
   let blogPostId = event.target.getAttribute("data-id");
   console.log(blogPostId);
 
@@ -18,18 +18,10 @@ const deletePostHandler = async (event) => {
   }
 };
 
-const editComment = async (event) => {
+// Function created that allows for a user to edit blog posts on dashboard page by redirecting them to the /create/:id page
+const editBlogPost = async (event) => {
   event.preventDefault();
   console.log("clicked me");
-
-  // get text and trim whitespace
-  // const comment_body = document.getElementById("editBtn").value.trim();
-
-  // get post id from URL
-  //   const url = window.location.toString().split("/");
-  //   const post_id = url[url.length - 1];
-
-  // console.log(blogPost);
 
   let blogPostId = event.target.getAttribute("data-id");
 
@@ -38,12 +30,14 @@ const editComment = async (event) => {
 
 const editButton = document.querySelectorAll("#editBtn");
 
+// Iterates over all buttons on the page and allows for edit functionality
 for (let i = 0; i < editButton.length; i++) {
-  editButton[i].addEventListener("click", editComment);
+  editButton[i].addEventListener("click", editBlogPost);
 }
 
 const deleteButton = document.querySelectorAll("#deleteBtn");
 
+// Iterates over all buttons on the page and allows for delete functionality
 for (let i = 0; i < deleteButton.length; i++) {
   deleteButton[i].addEventListener("click", deletePostHandler);
 }
