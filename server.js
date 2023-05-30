@@ -15,6 +15,7 @@ const PORT = process.env.PORT || 3001;
 // Set up Handlebars.js engine with custom helpers
 const hbs = exphbs.create({ helpers });
 
+// Sets session cookie properties
 const sess = {
   secret: "Super secret secret",
   cookie: {
@@ -51,6 +52,7 @@ sequelize.sync({ force: false }).then(() => {
 // Change logout from a button to a a tag link
 // Change date format????
 
-// Style Page -> make it a tech blog
+// Style Page
+// Make it a tech blog page
 // Noticed that the create new post has a login (not logout link) ****
 // Finish README.md doc
