@@ -1,9 +1,9 @@
 const deletePostHandler = async (event) => {
   event.preventDefault();
-  console.log('clicked me')
+  console.log("clicked me");
   console.log(event.target);
 
-  let blogPost = window.location.pathname.split('/');
+  let blogPost = window.location.pathname.split("/");
   console.log(blogPost);
 
   const response = await fetch(`/api/blogPost/${blogPost[2]}`, {

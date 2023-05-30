@@ -15,11 +15,12 @@
                 {{#if blogPosts.length}}
                     {{#each blogPosts as |blogPost|}}
                         {{!-- {{> card-userPage}} --}}
-                        <div class="card text-dark shadow">
+                        {{> dashboardPost blogPost}}
+                        {{!-- <div class="card text-dark shadow">
                             <h4><a href="/blogPost/{{blogPost.id}}">{{blogPost.title}}</a></h4>
                             <p>{{format_date blogPost.date_created}}</p>
                             <p>{{blogPost.description}}</p>
-                        </div>
+                        </div> --}}
                         <br>
                         {{!-- <button>Edit</button>
                         <button>Delete</button> --}}
@@ -58,3 +59,6 @@
     </div>
     {{/if}}
 </div>
+
+
+<script src="/js/dashboard.js"></script>

@@ -1,5 +1,33 @@
-  .card:hover {
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-      transform: scale(1.02);
-      transition: all 0.3s ease;
-  }
+header {
+  font-family: "Jomolhari", serif;
+}
+
+h1 {
+  font-family: "Jomolhari", serif;
+}
+
+main {
+  font-family: "Jomolhari", serif;
+}
+
+/* .navBar {
+    background-color: #00a0a0;
+}
+
+main {
+    background-color: #a28089;
+}
+
+.card-header {
+    background-color: #e5eaf5;
+}
+
+.card-body {
+    background-color: #ffa8B6;
+} */
+
+.card:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
+  transition: all 0.3s ease;
+}

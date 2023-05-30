@@ -7,9 +7,9 @@ const editComment = async (event) => {
   // get text and trim whitespace
   const comment_body = document.getElementById("editBtn").value.trim();
 
-// get post id from URL
-//   const url = window.location.toString().split("/");
-//   const post_id = url[url.length - 1];
+  // get post id from URL
+  //   const url = window.location.toString().split("/");
+  //   const post_id = url[url.length - 1];
 
   console.log(blogPost);
 
@@ -21,5 +21,3 @@ const editButton = document.querySelectorAll("#editBtn");
 for (let i = 0; i < editButton.length; i++) {
   editButton[i].addEventListener("click", editComment);
 }
-
-

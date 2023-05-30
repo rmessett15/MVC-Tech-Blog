@@ -3,24 +3,27 @@
   <div class="row">
     {{#each blogPosts as |blogPost|}}
       <div class="row mb-4 project card text-dark shadow">
-        <div class="col-md-5">
-          <h2>
+        <div class="card-header">
+          <h3>
             <a href="/blogPost/{{blogPost.id}}">{{blogPost.title}}</a>
-          </h2>
+          </h3>
           <p>Created by
             {{blogPost.user.name}}
             on
             {{format_date blogPost.date_created}}</p>
         </div>
-    {{!-- Maybe comment back in depending on format I want --}}
-    {{!-- <div class="col-md-7">
+        <div class="card-body">
+          <p>{{blogPost.description}}</p>
+        </div>
+        {{! Maybe comment back in depending on format I want }}
+        {{!-- <div class="col-md-7">
       <p>
         {{blogPost.description}}
       </p>
     </div> --}}
       </div>
 
-  {{!-- {{#each comments as |comment|}}
+      {{!-- {{#each comments as |comment|}}
     <div>
       <p>{{comment.comment_body}}</p>
     </div>

@@ -1,7 +1,7 @@
 async function newCommentHandler(event) {
   event.preventDefault();
 
-  console.log('clicked me');
+  console.log("clicked me");
 
   // get text and trim whitespace
   const comment_body = document.getElementById("comment").value.trim();

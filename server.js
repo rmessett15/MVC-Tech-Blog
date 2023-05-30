@@ -40,7 +40,7 @@ const hbs = exphbs.create({ helpers });
 const sess = {
   secret: "Super secret secret",
   cookie: {
-    maxAge: 12000000,
+    maxAge: 1200000,
     httpOnly: true,
     secure: false,
     sameSite: "strict",
@@ -70,7 +70,6 @@ sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log("Now listening"));
 });
 
-
 // Why does the login info sometimes not work after a while?
 // Why does comment table have a column that says blog_post_id not blogPost_id?
 
@@ -89,3 +88,13 @@ sequelize.sync({ force: false }).then(() => {
 // Style Page -> make it a tech blog
 // Need to add edit button and delete button functionality once I click on my own blog posts from the dashboard page for both pages -> (/dashboard & /blogPost/:id)
 // Need to make it so that when I idle on the site for too long when I click the delete button then I am redirected to the login page
+
+
+
+
+// Change logout from a button to a a tag link
+// Change date format????
+
+// Style Page -> make it a tech blog
+// Noticed that the create new post has a login (not logout link) ****
+// Finish README.md doc
