@@ -54,5 +54,5 @@ sequelize.sync({ force: false }).then(() => {
 
 // Style Page
 // Finish README.md doc
-// Noticed that I can only have a post body be so long
-// Noticed that the create new post has a login (not logout link) ****
+// Noticed that I can only have a post body be so long *****
+// Noticed that the create new post has a login (not logout link) *****
