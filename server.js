@@ -53,6 +53,6 @@ sequelize.sync({ force: false }).then(() => {
 // Change date format????
 
 // Style Page
-// Make it a tech blog page
+// Noticed that I can only have a post body be so long
 // Noticed that the create new post has a login (not logout link) ****
 // Finish README.md doc
