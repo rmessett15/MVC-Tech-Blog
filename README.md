@@ -36,11 +36,19 @@ Week-14 Challenge (Model-View-Controller)
 
 ## Description
 
+***
+
 ## Live URL
+
+***
 
 ## Live Screen Recording of Application Functionality
 
+***
+
 ## Screenshots
+
+***
 
 ## Technologies Used
 
@@ -100,11 +108,19 @@ This application is powered by Node.js (v16.19.1), Express.js (v.14.18.2), JavaS
 
 ## Credits
 
+Much of this application code followed outline code within the week-14 mini project, as well as the code my team wrote while working on project-2. I also collaborated with a tutor (Joem Casusi), and class TAs (Mark Alfano & Jennifer Trevisoto) to correct some of the final errors I was running into regarding the edit/delete functionality of blog posts, and session cookie set up.
+
 ## Features
+
+***Features of this application include the users ability to create an account, where their login info will be saved to a database and validated at a later login with session storage...
 
 ## Usage Information
 
+***
+
 ## Suggested Future Development
+
+***
 
 ## Contribution Guidelines
 

@@ -99,7 +99,7 @@ router.get("/create", async (req, res) => {
   try {
     if (req.session.logged_in) {
       res.render("create", {
-        loggedIn: req.session.logged_in,
+        logged_in: req.session.logged_in,
         userId: req.session.user_id,
       });
       return;
@@ -135,7 +135,7 @@ router.get("/create/:id", async (req, res) => {
     if (req.session.logged_in) {
       res.render("edit", {
         ...blogPost,
-        loggedIn: req.session.logged_in,
+        logged_in: req.session.logged_in,
         userId: req.session.user_id,
       });
       return;
