@@ -48,7 +48,15 @@ Week-14 Challenge (Model-View-Controller)
 
 ## Screenshots
 
-***
+![Screenshot1-week-14-challenge](https://github.com/rmessett15/MVC-Tech-Blog/assets/120127903/d3b4e9c7-44ae-49e7-a2b8-9cf210875a6f)
+
+![Screenshot2-week-14-challenge](https://github.com/rmessett15/MVC-Tech-Blog/assets/120127903/906aa42d-7628-4282-b39d-d5272f2953f5)
+
+![Screenshot3-week-14-challenge](https://github.com/rmessett15/MVC-Tech-Blog/assets/120127903/64582c7b-acf0-411f-bdf7-36925d18ee34)
+
+![Screenshot4-week-14-challenge](https://github.com/rmessett15/MVC-Tech-Blog/assets/120127903/a47f326c-1ca0-45f3-99f2-6ae1d42a77b8)
+
+![Screenshot5-week-14-challenge](https://github.com/rmessett15/MVC-Tech-Blog/assets/120127903/9cb35897-0e31-47b2-9d58-dcdf3150cc19)
 
 ## Technologies Used
 
