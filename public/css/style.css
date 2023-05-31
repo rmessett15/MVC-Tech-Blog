@@ -4,21 +4,24 @@ header {
 
 body {
   background-color: #a28089;
-  /* background-color: #84a59d; */
 }
 
 h1 {
   font-family: "Jomolhari", serif;
   background-color: teal;
+  color: #ffb3c6;
   padding: 16px;
   margin-bottom: 5px;
+}
+
+h2 {
+  color: #ffe5ec;
 }
 
 main {
   font-family: "Jomolhari", serif;
   margin-top: -5px;
   background-color: #a28089;
-  /* background-color: #00a0a0; */
 }
 
 .navBar {
@@ -26,8 +29,18 @@ main {
 }
 
 #logout {
-  /* background-color: #00a0a0; */
   background-color: #84a59d;
+}
+
+#titleInput,
+#bodyInput,
+#comment,
+#email-login,
+#password-login,
+#name-signup,
+#email-signup,
+#password-signup {
+  background-color: #e5eaf5;
 }
 
 .btn {
@@ -36,18 +49,14 @@ main {
 
 .card-header {
   background-color: #e5eaf5;
-  /* background-color: #f5cac3; */
-
 }
 
 .card-body {
   background-color: #ffe5ec;
-  /* background-color: #f7ede2; */
 }
 
 .card {
   background-color: #ffe5ec;
-  /* background-color: #f7ede2; */
 }
 
 .homepage-main {
