@@ -55,3 +55,4 @@ sequelize.sync({ force: false }).then(() => {
 // Style Page (color-schemes, logout-button-color, text-color, button-color, input-box-colors)
 // Finish README.md doc
 // Add styles to Login/Signup page
+// Add addition of only being able to edit and delete posts if you are the author of the posts

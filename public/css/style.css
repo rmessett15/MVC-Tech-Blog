@@ -4,6 +4,7 @@ header {
 
 body {
   background-color: #a28089;
+  /* background-color: #84a59d; */
 }
 
 h1 {
@@ -16,6 +17,8 @@ h1 {
 main {
   font-family: "Jomolhari", serif;
   margin-top: -5px;
+  background-color: #a28089;
+  /* background-color: #00a0a0; */
 }
 
 .navBar {
@@ -23,27 +26,36 @@ main {
 }
 
 #logout {
-  background-color: #00a0a0;
+  /* background-color: #00a0a0; */
+  background-color: #84a59d;
 }
 
-main {
-  background-color: #a28089;
+.btn {
+  background-color: #ffb3c6;
 }
 
 .card-header {
   background-color: #e5eaf5;
+  /* background-color: #f5cac3; */
+
 }
 
 .card-body {
   background-color: #ffe5ec;
+  /* background-color: #f7ede2; */
 }
 
 .card {
   background-color: #ffe5ec;
+  /* background-color: #f7ede2; */
 }
 
 .homepage-main {
   margin-top: 34px;
+}
+
+.user-name {
+  background-color: #84a59d;
 }
 
 .blogPost-main {
