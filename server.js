@@ -52,6 +52,6 @@ sequelize.sync({ force: false }).then(() => {
 // Change logout from a button to a a tag link
 // Change date format????
 
-// Style Page
+// Style Page (color-schemes, logout-button-color, text-color, button-color, input-box-colors)
 // Finish README.md doc
 // Add styles to Login/Signup page

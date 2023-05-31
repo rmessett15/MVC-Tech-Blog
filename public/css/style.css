@@ -2,29 +2,53 @@ header {
   font-family: "Jomolhari", serif;
 }
 
+body {
+  background-color: #a28089;
+}
+
 h1 {
   font-family: "Jomolhari", serif;
+  background-color: teal;
+  padding: 16px;
+  margin-bottom: 5px;
 }
 
 main {
   font-family: "Jomolhari", serif;
+  margin-top: -5px;
 }
 
-/* .navBar {
-    background-color: #00a0a0;
+.navBar {
+  background-color: #00a0a0;
+}
+
+#logout {
+  background-color: #00a0a0;
 }
 
 main {
-    background-color: #a28089;
+  background-color: #a28089;
 }
 
 .card-header {
-    background-color: #e5eaf5;
+  background-color: #e5eaf5;
 }
 
 .card-body {
-    background-color: #ffa8B6;
-} */
+  background-color: #ffe5ec;
+}
+
+.card {
+  background-color: #ffe5ec;
+}
+
+.homepage-main {
+  margin-top: 34px;
+}
+
+.blogPost-main {
+  margin-top: 34px;
+}
 
 .card:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);

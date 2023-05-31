@@ -108,7 +108,7 @@ This application is powered by Node.js (v16.19.1), Express.js (v.14.18.2), JavaS
 
 ## Credits
 
-Much of this application code followed outline code within the week-14 mini project, as well as the code my team wrote while working on project-2. I also collaborated with a tutor (Joem Casusi), and class TAs (Mark Alfano & Jennifer Trevisoto) to correct some of the final errors I was running into regarding the edit/delete functionality of blog posts, and session cookie set up.
+Much of this application code followed outline code within the week-14 mini project, as well as the code my team wrote while working on project-2. I also collaborated with a tutor (Joem Casusi), the class TAs (Mark Alfano & Jennifer Trevisoto), and the class instructor (Jonathan Dionne) to correct some of the final errors I was running into regarding the edit/delete functionality of blog posts, and session cookie set up.
 
 ## Features
 
