@@ -49,10 +49,6 @@ sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log("Now listening"));
 });
 
-// Change logout from a button to a a tag link
-// Change date format????
-
-// Style Page (color-schemes, logout-button-color, text-color, button-color, input-box-colors)
 // Finish README.md doc
-// Add styles to Login/Signup page
 // Add addition of only being able to edit and delete posts if you are the author of the posts
+// Change logout from a button to a a tag link
