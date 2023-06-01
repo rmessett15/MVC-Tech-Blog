@@ -48,7 +48,3 @@ app.use(routes);
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log("Now listening"));
 });
-
-// Finish README.md doc
-// Add addition of only being able to edit and delete posts if you are the author of the posts
-// Change logout from a button to a a tag link
