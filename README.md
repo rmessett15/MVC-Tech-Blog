@@ -124,12 +124,11 @@ Much of this application code followed outline code within the week-14 mini proj
 
 ## Features
 
-***Features of this application include the users ability to create an account, where their login info will be saved to a database and validated at a later login with session storage...
-It features the dashboard page which gives users their own space to store their own created content and s
+Features of this application include the users ability to create an account, where their login info will be hashed and saved to a database and validated at a later login with session storage. Visitors of the site will be able to see the homepage or public feed without needing to create an account, however will be prompted to set up an account when trying to access specific blogs or when trying to create posts. Once an account has been created the site features access to the dashboard page which gives users space to store their own created content, interact with other users posts (i.e. leave comments), and edit and delete their own posts. 
 
 ## Usage Information
 
-***
+Usage of this application is very intuitive. Users will interact with the site completely through the frontend UI. They will see a public facing feed, and a login button where they will be prompted to either login or create an account. From there navigation of the entire application can be conducted, and users can contribute and start creating content instantly.
 
 ## Suggested Future Development
 
